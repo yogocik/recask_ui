@@ -5,9 +5,99 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background: black;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.App {
+  font-family: sans-serif;
+}
+
+.card-list-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+.card-view {
+  border: 1px solid red;
+  background: silver;
+  flex-grow: 0;
+  width: 300px;
+  height: 400px;
+  margin: 8px;
+  border-radius: 8px;
+  outline: none;
+}
+
+.card-view .card-header {
+  height: 15%;
+  background: red;
+  color: white;
+  padding: 12px 8px 12px 8px;
+  border-bottom: 1px solid red;
+  border-radius: 8px 8px 0 0;
+}
+
+.card-content {
+  height: 70%;
+  width: 100%;
+  border: 1px solid blue;
+}
+
+.card-content img {
+  height: 100%;
+  width: 100%;
+  object-fit: fill;
+}
+
+.card-view .card-footer {
+  height: 15%;
+}
+
+.loader {
+  border: 10px solid #f3f3f3;
+  border-top: 10px solid #3498db;
+  border-radius: 50%;
+  width: 80px;
+  height: 80px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+} 
+
+.centered-div {
+  display: flex;
+  justify-content: center; /* Centers horizontally */
+  align-items: center;    /* Centers vertically */
+}
+
+.pagination-button {
+  text-decoration: none;
+  display: inline-block;
+  padding: 8px 16px;
+  background-color: white;
+  color: black
+}
+.pagination-button:hover {
+  background-color: #ddd; 
 }
